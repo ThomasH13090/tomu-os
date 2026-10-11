@@ -25,10 +25,9 @@ modules:
         - atim/starship
     install:
       packages:
-        - micro
         - starship
-        - mangowm
         - noctalia
+        - umbriel-nightly
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
