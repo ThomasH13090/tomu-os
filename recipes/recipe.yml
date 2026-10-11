@@ -23,13 +23,11 @@ modules:
     repos:
       copr:
         - atim/starship
-        - avengemedia/dms
     install:
       packages:
         - micro
         - starship
-        - niri
-        - dms
+        - mangowm
         - noctalia
     remove:
       packages:
@@ -37,6 +35,8 @@ modules:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - niri
+        - dms
 
   - type: default-flatpaks
     configurations:
