@@ -77,9 +77,9 @@ modules:
         - Inter
 
   - type: script
-    snippets:
-      - "wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.8.1.88030.tar.gz > /tmp" # example: download binary
-      - tar -xvf jetbrains-toolbox-3.8.1.88030.tar.gz -C /usr/bin/jetbrains-toolbox
+    # snippets:
+      # - "wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.8.1.88030.tar.gz" # example: download binary
+      # - tar -xvf ./jetbrains-toolbox-3.8.1.88030.tar.gz -C /tmp/jetbrains-toolbox
       # - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
     scripts:
       - main.sh # example: run files/scripts/myscript.sh
