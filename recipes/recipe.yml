@@ -16,15 +16,20 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+      - source: usr/configuration
+        destination: ~/.config/niri/config.kdl
 
   - type: dnf
     repos:
       copr:
         - atim/starship
+        - avengemedia/dms
     install:
       packages:
         - micro
         - starship
+        - niri dms
+        - noctalia
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -40,6 +45,7 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - org.mozilla.firefox
           - org.gnome.Loupe
+          - com.vscodium.codium
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
