@@ -19,12 +19,20 @@ modules:
       - source: usr/config
         destination: /usr/config/niri/config.kdl
 
+  # - type : rpm-ostree
+  #   repos: 
+  #     - https://terra.fyralabs.com/terra.repo  #terra for umbriel 
+  #   install:
+  #     - terra-release
   - type: dnf
     repos:
       copr:
         - atim/starship
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo  #terra for umbriel 
     install:
       packages:
+        - terra-release-nvidia
         - starship
         - noctalia
         - umbriel-nightly
