@@ -28,14 +28,16 @@ modules:
     repos:
       copr:
         - atim/starship
-      files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo  #terra for umbriel 
+        - avengemedia/dms
+      # files:
+      #   - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo  #terra for umbriel 
     install:
       packages:
-        - terra-release-nvidia
+        # - terra-release-nvidia
         - starship
+        - dms
+        - niri
         - noctalia
-        - umbriel-nightly
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
