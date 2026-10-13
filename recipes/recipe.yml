@@ -28,24 +28,16 @@ modules:
     repos:
       copr:
         - atim/starship
-        - avengemedia/dms
-      # files:
-      #   - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo  #terra for umbriel 
     install:
       packages:
-        # - terra-release-nvidia
         - starship
-        - dms
-        - niri
-        - noctalia
+        - docker-ce-rootless-extras
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-        - niri
-        - dms
 
   - type: default-flatpaks
     configurations:
@@ -82,8 +74,7 @@ modules:
         - JetBrainsMono
       google-fonts:
         - Roboto
-        - Open Sans
-        - Inter
+        - "Open Sans"
 
   - type: script
     # snippets:
