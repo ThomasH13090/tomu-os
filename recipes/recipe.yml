@@ -39,7 +39,6 @@ modules:
         - quickshell-git
         - dankcalendar
         - matugen
-        - uidmap
         - fuse-overlayfs
         - niri
         - dms
