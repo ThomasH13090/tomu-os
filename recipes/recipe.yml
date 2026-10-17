@@ -12,13 +12,16 @@ image-version: latest # You can pin to a specific version of Fedora as well
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-      - source: usr/config
-        destination: /usr/config/niri/config.kdl
-
+  # - type: files
+  #   files:
+  #     - source: system
+  #       destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  #     - source: usr/config
+  #       destination: /usr/config/niri/config.kdl
+  - type: copy
+    from: files
+    src: podman_setup.sh
+    dest: /
   # - type : rpm-ostree
   #   repos: 
   #     - https://terra.fyralabs.com/terra.repo  #terra for umbriel 
@@ -28,10 +31,19 @@ modules:
     repos:
       copr:
         - atim/starship
+        - avengemedia/dms
+        - avengemedia/danklinux
     install:
       packages:
         - starship
-        - docker-ce-rootless-extras
+        - quickshell-git
+        - dankcalendar
+        - matugen
+        - uidmap
+        - fuse-overlayfs
+        - niri
+        - dms
+        - dms-greeter
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -52,6 +64,8 @@ modules:
           - io.github.flattool.Warehouse
           - com.getmailspring.Mailspring
           - com.jetbrains.Rider
+          - com.heroicgameslauncher.hgl
+          - com.usebottles.bottles
       - scope: user # Also add Flathub user repo, but no user packages
     
   - type: gnome-extensions

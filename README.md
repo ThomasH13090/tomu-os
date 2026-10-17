@@ -41,3 +41,10 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 ```bash
 cosign verify --key cosign.pub ghcr.io/thomash13090/tomu-os
 ```
+
+Pb carte NVIDIA avec niri : 
+ls -l /dev/dri/
+
+debug {
+    render-drm-device "/dev/dri/renderXXX"
+}
