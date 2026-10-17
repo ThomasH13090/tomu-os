@@ -12,16 +12,16 @@ image-version: latest # You can pin to a specific version of Fedora as well
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  # - type: files
-  #   files:
-  #     - source: system
-  #       destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-  #     - source: usr/config
-  #       destination: /usr/config/niri/config.kdl
-  - type: copy
-    from: files
-    src: podman_setup.sh
-    dest: /
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+      - source: usr
+        destination: /usr/config
+  # - type: copy
+  #   from: files
+  #   src: /files/podman_setup.sh
+  #   dest: /podman_setup.sh
   # - type : rpm-ostree
   #   repos: 
   #     - https://terra.fyralabs.com/terra.repo  #terra for umbriel 
