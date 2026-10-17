@@ -41,7 +41,6 @@ modules:
         - matugen
         - fuse-overlayfs
         - cups-pk-helper
-        - adw-gtk3
         - niri
         - dms
         - dms-greeter
