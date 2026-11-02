@@ -66,6 +66,7 @@ modules:
           - com.jetbrains.Rider
           - com.heroicgameslauncher.hgl
           - com.usebottles.bottles
+          - org.localsend.localsend_app
       - scope: user # Also add Flathub user repo, but no user packages
     
   - type: gnome-extensions
